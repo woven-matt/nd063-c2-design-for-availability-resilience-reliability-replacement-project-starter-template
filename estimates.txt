@@ -1,0 +1,14 @@
+RTO
+
+Single AZ - 1–2 Minutes:
+Cluster provides redundancy for single AZ outage.
+Single Region - 45m ~ 1hr
+Respond to incident: 15m
+Determine problem: 15m
+Fail over instance by promoting read replica: 15m
+
+RPO
+Single AZ - 0:
+Cluster provides redundancy for single AZ outage.
+Single Region - 6–20 Minutes
+AWS documentation suggests this RPO should be 6-20 minutes.  But in practice this is probably lower, as the read cluster should be reading the log and updating regularly, so this should be minutes in practice.

@@ -1,0 +1,30 @@
+sh-4.2$ mysql -h udacity.cluster-cie55cacwshq.ap-northeast-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password:
+MySQL [udacity]> create table tblEmployee
+    -> (
+    -> Employee_id int auto_increment primary key,
+    -> Employee_first_name varchar(500) NOT null,
+    -> Employee_last_name varchar(500) NOT null,
+    -> Employee_Address varchar(1000),
+    -> Employee_emailID varchar(500),
+    -> Employee_department_ID int default 9,
+    -> Employee_Joining_date date
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+MySQL [udacity]> INSERT INTO tblemployee (employee_first_name, employee_last_name) values ('Nisarg','Upadhyay')
+    -> ;
+ERROR 1146 (42S02): Table 'udacity.tblemployee' doesn't exist
+MySQL [udacity]> INSERT INTO tblEmployee (employee_first_name, employee_last_name) values ('Nisarg','Upadhyay')
+    -> ;
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [udacity]> select * from tblEmployee;
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+| Employee_id | Employee_first_name | Employee_last_name | Employee_Address | Employee_emailID | Employee_department_ID | Employee_Joining_date |
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+|           1 | Nisarg              | Upadhyay           | NULL             | NULL             |                      9 | NULL                  |
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+1 row in set (0.03 sec)
+
+MySQL [udacity]>
