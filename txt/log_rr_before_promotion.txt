@@ -1,0 +1,18 @@
+MySQL [(none)]> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> select * from tblEmployee;
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+| Employee_id | Employee_first_name | Employee_last_name | Employee_Address | Employee_emailID | Employee_department_ID | Employee_Joining_date |
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+|           1 | Nisarg              | Upadhyay           | NULL             | NULL             |                      9 | NULL                  |
+|           2 | Nisarg              | Newone             | NULL             | NULL             |                      9 | NULL                  |
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+2 rows in set (0.00 sec)
+
+MySQL [udacity]> INSERT INTO tblEmployee (employee_first_name, employee_last_name) values ('Nisarg','read')
+    -> ;
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]>

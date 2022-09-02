@@ -1,0 +1,17 @@
+MySQL [(none)]> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> INSERT INTO tblEmployee (employee_first_name, employee_last_name) values ('Nisarg','read');
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [udacity]> select * from tblEmployee;
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+| Employee_id | Employee_first_name | Employee_last_name | Employee_Address | Employee_emailID | Employee_department_ID | Employee_Joining_date |
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+|           1 | Nisarg              | Upadhyay           | NULL             | NULL             |                      9 | NULL                  |
+|           2 | Nisarg              | Newone             | NULL             | NULL             |                      9 | NULL                  |
+|           3 | Nisarg              | read               | NULL             | NULL             |                      9 | NULL                  |
++-------------+---------------------+--------------------+------------------+------------------+------------------------+-----------------------+
+3 rows in set (0.00 sec)

@@ -12,9 +12,6 @@ MySQL [udacity]> create table tblEmployee
     -> );
 Query OK, 0 rows affected (0.03 sec)
 
-MySQL [udacity]> INSERT INTO tblemployee (employee_first_name, employee_last_name) values ('Nisarg','Upadhyay')
-    -> ;
-ERROR 1146 (42S02): Table 'udacity.tblemployee' doesn't exist
 MySQL [udacity]> INSERT INTO tblEmployee (employee_first_name, employee_last_name) values ('Nisarg','Upadhyay')
     -> ;
 Query OK, 1 row affected (0.01 sec)
